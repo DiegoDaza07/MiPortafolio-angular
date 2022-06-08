@@ -1,0 +1,430 @@
+<div class="center-content">
+<ul class="slider">
+            <li id="slide1">
+
+                <div class="sobre-mi">
+
+                    <div class="sobre-mi-cuerpo-1">  
+                        <div class="cuerpo-1-imagen"><img src="" alt=""></div>
+                        <div class="cuerpo-1-texto">
+                            <div class="texto-sobre-mi"><p>{{texto_sobre_mi}}</p></div>
+                        </div>
+                     </div>
+
+                    <div class="sobre-mi-cuerpo-2">  
+                        <div class="mi-nombre" > <H1 id="mi-nombre">{{mi_nombre}}</H1></div>
+                         <div class="cuerpo-2-contenido">
+                             <div class="datos"><p>Domicilio:&nbsp;{{domicilio}}</div> 
+                             <div class="datos"><p>Correo Electronico: {{correo}}</p></div>
+                             <div class="datos"><p>Numero de Documento: {{numero_de_documento}}</p></div> 
+                             <div class="datos"><p>Telefono: {{telefono}}</p></div>
+                         </div>
+                    </div>
+                </div>
+            </li>
+
+            <li id="slide2">
+            <div class="experiencia">
+                    <div class="plantilla">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{empresa1}}</h2></div>
+                            <div class="datos"> <p>Cargo:&nbsp;{{cargo1}}</div>
+                            <div class="datos"><p>Jefe&nbsp;Inmediato:&nbsp;{{jefe_inmediato1}}</p></div>
+                            <div class="datos"><p>Pagina&nbsp;Web:&nbsp;{{pagina_web1}}</p></div>
+                            <div class="datos"><p>Tiempo&nbsp;laborado:&nbsp;{{tiempo_laborado1}}</p></div>
+                        </div>
+                  </div>
+
+                <div class="plantilla" *ngIf="experiencia2">
+                    <div class="plantilla-imagen"></div>
+                    <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{empresa2}}</h2></div>
+                            <div class="datos"> <p>Cargo:&nbsp;{{cargo2}}</p></div>
+                            <div class="datos"><p>Jefe&nbsp;Inmediato:&nbsp;{{jefe_inmediato2}}</p></div>
+                            <div class="datos"><p>Pagina&nbsp;Web:&nbsp;{{pagina_web2}}</p></div>
+                            <div class="datos"><p>Tiempo&nbsp;laborado:&nbsp;{{tiempo_laborado2}}</p></div>
+                    </div>
+                </div>
+
+                <div class="plantilla" *ngIf="experiencia3">
+                    <div class="plantilla-imagen"></div>
+                    <div class="plantilla-texto">
+                        <div class="institucion"><h2>{{empresa3}}</h2></div>
+                        <div class="datos"> <p>Cargo:&nbsp;{{cargo3}}</p></div>
+                        <div class="datos"><p>Jefe&nbsp;Inmediato:&nbsp;{{jefe_inmediato3}}</p></div>
+                        <div class="datos"><p>Pagina&nbsp;Web:&nbsp;{{pagina_web3}}</p></div>
+                        <div class="datos"><p>Tiempo&nbsp;laborado:&nbsp;{{tiempo_laborado3}}</p></div>
+                    </div>
+                </div>
+                <div class="plantilla" *ngIf="experiencia4">
+                    <div class="plantilla-imagen"></div>
+                    <div class="plantilla-texto">
+                        <div class="institucion"><h2>{{empresa4}}</h2></div>
+                        <div class="datos"> <p>Cargo:&nbsp;{{cargo4}}</p></div>
+                        <div class="datos"><p>Jefe&nbsp;Inmediato:&nbsp;{{jefe_inmediato4}}</p></div>
+                        <div class="datos"><p>Pagina&nbsp;Web:&nbsp;{{pagina_web4}}</p></div>
+                        <div class="datos"><p>Tiempo&nbsp;laborado:&nbsp;{{tiempo_laborado4}}</p></div>
+                    </div>
+                </div>
+
+                   
+                
+            </div>
+            </li>
+            <li id="slide3">
+                <div class="educacion">
+
+
+                    <div class="plantilla" *ngIf="educacion1">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{institucion1}}</h2></div>
+                            <div class="datos"><p>Nivel:&nbsp;{{nivel1}}</p></div>
+                            <div class="datos"><p>Titulo:&nbsp;{{titulo1}}</p></div>
+                            <div class="datos"><p>Tiempo:&nbsp;{{tiempo1}}</p></div>
+                        </div>
+                    </div>
+
+                    <div class="plantilla" *ngIf="educacion2">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{institucion2}}</h2></div>
+                            <div class="datos"><p>Nivel:&nbsp;{{nivel2}}</p></div>
+                            <div class="datos"><p>Titulo:&nbsp;{{titulo2}}</p></div>
+                            <div class="datos"><p>Tiempo:&nbsp;{{tiempo2}}</p></div>
+                        </div>
+                    </div>
+
+                    <div class="plantilla" *ngif="educacion3">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{institucion3}}</h2></div>
+                            <div class="datos"><p>Nivel:&nbsp;{{nivel3}}</p></div>
+                            <div class="datos"><p>Titulo:&nbsp;{{titulo3}}</p></div>
+                            <div class="datos"><p>Tiempo:&nbsp;{{tiempo3}}</p></div>
+                        </div>
+                    </div>
+
+                    <div class="plantilla" *ngIf="educacion4">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{institucion4}}</h2></div>
+                            <div class="datos"><p>Nivel:&nbsp;{{nivel4}}</p></div>
+                            <div class="datos"><p>Titulo:&nbsp;{{titulo4}}</p></div>
+                            <div class="datos"><p>Tiempo:&nbsp;{{tiempo4}}</p></div>
+                        </div>
+                    </div>
+
+                    <div class="plantilla" *ngIf="educacion5">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{institucion5}}</h2></div>
+                            <div class="datos"><p>Nivel:&nbsp;{{nivel5}}</p></div>
+                            <div class="datos"><p>Titulo:&nbsp;{{titulo5}}</p></div>
+                            <div class="datos"><p>Tiempo:&nbsp;{{tiempo5}}</p></div>
+                        </div>
+                    </div>
+
+                    <div class="plantilla" *ngIf="educacion6">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{institucion6}}</h2></div>
+                            <div class="datos"><p>Nivel:&nbsp;{{nivel6}}</p></div>
+                            <div class="datos"><p>Titulo:&nbsp;{{titulo6}}</p></div>
+                            <div class="datos"><p>Tiempo:&nbsp;{{tiempo6}}</p></div>
+                        </div>
+                    </div>
+
+                    <div class="plantilla" *ngIf="educacion7">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{institucion7}}</h2></div>
+                            <div class="datos"><p>Nivel:&nbsp;{{nivel7}}</p></div>
+                            <div class="datos"><p>Titulo:&nbsp;{{titulo7}}</p></div>
+                            <div class="datos"><p>Tiempo:&nbsp;{{tiempo7}}</p></div>
+                        </div>
+                    </div>                    
+
+                    <div class="plantilla" *ngIf="educacion8">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{institucion8}}</h2></div>
+                            <div class="datos"><p>Nivel:&nbsp;{{nivel8}}</p></div>
+                            <div class="datos"><p>Titulo:&nbsp;{{titulo8}}</p></div>
+                            <div class="datos"><p>Tiempo:&nbsp;{{tiempo8}}</p></div>
+                        </div>
+                    </div>                                                                                                                        
+
+
+
+
+
+
+                </div>
+            </li>
+
+
+            <li id="slide4">
+                <div class="proyectos">
+
+                    <div class="plantilla" *ngIf="proyecto1">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{nombre_proyecto1}}</h2></div>
+                            <div class="datos"><p>Acerca&nbsp;de&nbsp;{{acerca_de1}}</p> </div>
+                            <div class="datos"><p>Github&nbsp;{{link_github1}}</p></div>
+                        </div>
+                    </div>
+
+                    <div class="plantilla" *ngIf="proyecto2">
+                        <div class="plantilla-imagen"></div>
+                        <div class="plantilla-texto">
+                            <div class="institucion"><h2>{{nombre_proyecto2}}</h2></div>
+                            <div class="datos"><p>Acerca&nbsp;de&nbsp;{{acerca_de2}}</p> </div>
+                            <div class="datos"><p>Github&nbsp;{{link_github2}}</p></div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </li>
+            
+            <li id="slide5">
+                
+            </li>
+
+            <li id="slide6">
+                <div class="redes-sociales">
+
+                </div>
+            </li>
+            
+    <li id="slide7">
+        <div *ngIf="!registrado">
+
+                
+
+                <p>Usuario: <input   type="text"  placeholder="Usuario" [value]="" [(ngModel)]="usuario"></p> 
+                
+                <p>Contraseña: <input type="password" placeholder="contraseña" [value]="" [(ngModel)]="contrasena"></p> 
+                
+                <p><input type="submit" value="Entrar" (click)="getadministrador()"></p> 
+                
+            </div>
+
+            <div *ngIf="registrado">
+
+
+                
+            <h1 style="text-align: center;">ADMINISTRADOR</h1>
+
+            <h2 style="padding: 1%;">DATOS PERSONALES</h2>
+
+
+
+            <div class="edicion">  
+                <div class="configuracion"><p>Mi nombre</p><input type="text" [(ngModel)]="mi_nombre"></div>
+                <div class="configuracion"><p>Texto Sobre Mi</p><input type="text" [(ngModel)]="texto_sobre_mi"></div>
+                <div class="configuracion"><p>Domicilio</p><input type="text" [(ngModel)]="domicilio"></div>
+                <div class="configuracion"><p>Correo</p><input type="text" [(ngModel)]="correo"></div>
+                <div class="configuracion"><p>Numero De Documento</p><input type="number" [(ngModel)]="numero_de_documento"></div>
+                <div class="configuracion"><p>Telefono</p><input type="number" [(ngModel)]="telefono"></div>
+            </div>
+
+            <div class="edicion">
+                <h2 style="padding: 1%;">EXPERIENCIA</h2>
+                <input type="checkbox" [(ngModel)]="experiencia">
+                <p>Abrir/Cerrar</p>
+            </div>
+
+            <div class="edicion" *ngIf="experiencia">
+                
+                <h2 style="padding: 1%;">Experiencia 1</h2>
+
+                
+                <div class="configuracion"><p>Empresa</p><input type="text" [(ngModel)]="empresa1" ></div>
+                <div class="configuracion"><p>Cargo</p><input type="text" [(ngModel)]="cargo1" ></div>
+                <div class="configuracion"><p>Jefe Inmediato</p><input type="text" [(ngModel)]="jefe_inmediato1" ></div>
+                <div class="configuracion"><p>Pagina Web</p><input type="text" [(ngModel)]="pagina_web1" ></div>
+                <div class="configuracion"><p>Tiempo Laborado</p><input type="text" [(ngModel)]="tiempo_laborado1" ></div>
+                
+                <h2 style="padding: 1%;">Experiencia 2</h2>
+
+                <div style="padding: 1%;">
+
+                <p>Visible:<input type="checkbox" [(ngModel)]="experiencia2"></p>
+                
+                
+                <div class="configuracion"><p>Empresa</p><input type="text" [(ngModel)]="empresa2" ></div>
+                <div class="configuracion"><p>Cargo</p><input type="text" [(ngModel)]="cargo2" ></div>
+                <div class="configuracion"><p>Jefe Inmediato</p><input type="text" [(ngModel)]="jefe_inmediato2" ></div>
+                <div class="configuracion"><p>Pagina Web</p><input type="text" [(ngModel)]="pagina_web2" ></div>
+                <div class="configuracion"><p>Tiempo Laborado</p><input type="text" [(ngModel)]="tiempo_laborado2" ></div>
+                </div>
+
+                <h2 style="padding: 1%;">Experiencia 3</h2>
+
+                <div style="padding: 1%;">
+
+                <p>Visible:<input type="checkbox" [(ngModel)]="experiencia3"></p>
+                
+                <div class="configuracion"><p>Empresa</p><input type="text" [(ngModel)]="empresa3" ></div>
+                <div class="configuracion"><p>Cargo</p><input type="text" [(ngModel)]="cargo3" ></div>
+                <div class="configuracion"><p>Jefe Inmediato</p><input type="text" [(ngModel)]="jefe_inmediato3" ></div>
+                <div class="configuracion"><p>Pagina Web</p><input type="text" [(ngModel)]="pagina_web3" ></div>
+                <div class="configuracion"><p>Tiempo Laborado</p><input type="text" [(ngModel)]="tiempo_laborado3" ></div>
+                </div>
+
+                <h2 style="padding: 1%;">Experiencia 4</h2>
+
+                <div style="padding: 1%;">
+
+                <p>Visible:<input type="checkbox" [(ngModel)]="experiencia4"></p>
+                
+                <div class="configuracion"><p>Empresa</p><input type="text" [(ngModel)]="empresa4" ></div>
+                <div class="configuracion"><p>Cargo</p><input type="text" [(ngModel)]="cargo4" ></div>
+                <div class="configuracion"><p>Jefe Inmediato</p><input type="text" [(ngModel)]="jefe_inmediato4" ></div>
+                <div class="configuracion"><p>Pagina Web</p><input type="text" [(ngModel)]="pagina_web2" ></div>
+                <div class="configuracion"><p>Tiempo Laborado</p><input type="text" [(ngModel)]="tiempo_laborado4" ></div>
+                </div>
+            </div>
+
+            <div class="edicion">
+                <h2 style="padding: 1%;">EDUCACION</h2>
+                <input type="checkbox" [(ngModel)]="educacion">
+                <p>Abrir/Cerrar</p>
+            </div>
+
+            <div class="edicion" *ngIf="educacion">
+
+                <h2 style="padding: 1%;">EDUCACION 1</h2>
+                <div style="padding: 1%;">
+                    <p>Visible:<input type="checkbox" [(ngModel)]="educacion1"></p>
+                    <div class="configuracion"><p>Institucion:</p><input type="text" [(ngModel)]="institucion1" ></div>
+                    <div class="configuracion"><p>Nivel:</p><input type="text" [(ngModel)]="nivel1" ></div>
+                    <div class="configuracion"><p>Titulo:</p><input type="text" [(ngModel)]="titulo1" ></div>
+                    <div class="configuracion"><p>Tiempo:</p><input type="text" [(ngModel)]="tiempo1" ></div>
+                </div>            
+
+                <h2 style="padding: 1%;">EDUCACION 2</h2>
+                <div style="padding: 1%;">
+                    <p>Visible:<input type="checkbox" [(ngModel)]="educacion2"></p>
+                    <div class="configuracion"><p>Institucion:</p><input type="text" [(ngModel)]="institucion2" ></div>
+                    <div class="configuracion"><p>Nivel:</p><input type="text" [(ngModel)]="nivel2" ></div>
+                    <div class="configuracion"><p>Titulo:</p><input type="text" [(ngModel)]="titulo2" ></div>
+                    <div class="configuracion"><p>Tiempo:</p><input type="text" [(ngModel)]="tiempo2" ></div>
+                </div>  
+
+                <h2 style="padding: 1%;">EDUCACION 3</h2>
+                <div style="padding: 1%;">
+                    <p>Visible:<input type="checkbox" [(ngModel)]="educacion3"></p>
+                    <div class="configuracion"><p>Institucion:</p><input type="text" [(ngModel)]="institucion3" ></div>
+                    <div class="configuracion"><p>Nivel:</p><input type="text" [(ngModel)]="nivel3" ></div>
+                    <div class="configuracion"><p>Titulo:</p><input type="text" [(ngModel)]="titulo3" ></div>
+                    <div class="configuracion"><p>Tiempo:</p><input type="text" [(ngModel)]="tiempo3" ></div>
+                </div>  
+                
+                <h2 style="padding: 1%;">EDUCACION 4</h2>
+                <div style="padding: 1%;">
+                    <p>Visible:<input type="checkbox" [(ngModel)]="educacion4"></p>
+                    <div class="configuracion"><p>Institucion:</p><input type="text" [(ngModel)]="institucion4" ></div>
+                    <div class="configuracion"><p>Nivel:</p><input type="text" [(ngModel)]="nivel4" ></div>
+                    <div class="configuracion"><p>Titulo:</p><input type="text" [(ngModel)]="titulo4" ></div>
+                    <div class="configuracion"><p>Tiempo:</p><input type="text" [(ngModel)]="tiempo4" ></div>
+                </div>  
+                
+                <h2 style="padding: 1%;">EDUCACION 5</h2>
+                <div style="padding: 1%;">
+                    <p>Visible:<input type="checkbox" [(ngModel)]="educacion5"></p>
+                    <div class="configuracion"><p>Institucion:</p><input type="text" [(ngModel)]="institucion5" ></div>
+                    <div class="configuracion"><p>Nivel:</p><input type="text" [(ngModel)]="nivel5" ></div>
+                    <div class="configuracion"><p>Titulo:</p><input type="text" [(ngModel)]="titulo5" ></div>
+                    <div class="configuracion"><p>Tiempo:</p><input type="text" [(ngModel)]="tiempo5" ></div>
+                </div>  
+                
+                <h2 style="padding: 1%;">EDUCACION 6</h2>
+                <div style="padding: 1%;">
+                    <p>Visible:<input type="checkbox" [(ngModel)]="educacion6"></p>
+                    <div class="configuracion"><p>Institucion:</p><input type="text" [(ngModel)]="institucion6" ></div>
+                    <div class="configuracion"><p>Nivel:</p><input type="text" [(ngModel)]="nivel6" ></div>
+                    <div class="configuracion"><p>Titulo:</p><input type="text" [(ngModel)]="titulo6" ></div>
+                    <div class="configuracion"><p>Tiempo:</p><input type="text" [(ngModel)]="tiempo6" ></div>
+                </div>  
+                
+                <h2 style="padding: 1%;">EDUCACION 7</h2>
+                <div style="padding: 1%;">
+                    <p>Visible:<input type="checkbox" [(ngModel)]="educacion7"></p>
+                    <div class="configuracion"><p>Institucion:</p><input type="text" [(ngModel)]="institucion7" ></div>
+                    <div class="configuracion"><p>Nivel:</p><input type="text" [(ngModel)]="nivel7" ></div>
+                    <div class="configuracion"><p>Titulo:</p><input type="text" [(ngModel)]="titulo7" ></div>
+                    <div class="configuracion"><p>Tiempo:</p><input type="text" [(ngModel)]="tiempo7" ></div>
+                </div>  
+                
+                <h2 style="padding: 1%;">EDUCACION 8</h2>
+                <div style="padding: 1%;">
+                    <p>Visible:<input type="checkbox" [(ngModel)]="educacion8"></p>
+                    <div class="configuracion"><p>Institucion:</p><input type="text" [(ngModel)]="institucion8" ></div>
+                    <div class="configuracion"><p>Nivel:</p><input type="text" [(ngModel)]="nivel8" ></div>
+                    <div class="configuracion"><p>Titulo:</p><input type="text" [(ngModel)]="titulo8" ></div>
+                    <div class="configuracion"><p>Tiempo:</p><input type="text" [(ngModel)]="tiempo8" ></div>
+                </div>              
+
+
+
+            </div>
+
+            <div class="edicion">
+                <h2 style="padding: 1%;">PROYECTOS</h2>
+                <input type="checkbox" [(ngModel)]="proyectos">
+                <p>Abrir/Cerrar</p>
+            </div>
+
+            <div class="edicion" *ngIf="proyectos">
+
+                <h2 style="padding: 1%;">PROYECTO 1</h2>
+                <div style="padding: 1%;">
+                    <p>Visible:<input type="checkbox" [(ngModel)]="proyecto1"></p>
+                    <div class="configuracion"><p>Nombre del proyecto</p><input type="text" [(ngModel)]="nombre_proyecto1"></div>
+                    <div class="configuracion"><p>Acerca de:</p><input type="text" [(ngModel)]="acerca_de1"></div>
+                    <div class="configuracion"><p>link Githubp><input type="text" [(ngModel)]="link_github1"></div>
+                </div> 
+
+                <h2 style="padding: 1%;">PROYECTO 2</h2>
+                <div style="padding: 1%;">
+                    <p>Visible:<input type="checkbox" [(ngModel)]="proyecto2"></p>
+                    <div class="configuracion"><p>Nombre del proyecto:</p><input type="text" [(ngModel)]="nombre_proyecto2"></div>
+                    <div class="configuracion"><p>Acerca de:</p><input type="text" [(ngModel)]="acerca_de2"></div>
+                    <div class="configuracion"><p>link Github: </p><input type="text" [(ngModel)]="link_github2"></div>
+                </div> 
+
+
+            </div>
+                <div class="mala_practica espacio" style="margin-top: 5%;"></div>
+
+                <div class="edicion">
+            
+                    <h2 style="padding: 1%;">SEGURIDAD</h2>
+
+                    <div class="configuracion"><p>Cambiar Usuario:</p><input type="text" [(ngModel)]="usuario"></div>
+                    <div class="configuracion"><p>Cambiar contraseña: </p><input type="text" [(ngModel)]="contrasena"></div>         
+                
+                    <div style="display: flex;">
+
+                        <button style=" padding: 2%;" (click)="salir()"><h2>Salir</h2></button>
+                        <button style=" padding: 2%;" (click)="guardar()"><h2>Guardar Cambios</h2></button>
+                        <button style=" padding: 2%;" (click)="cancelar()"><h2>Cancelar</h2></button>
+
+                    </div>
+                </div>  
+
+        </div>
+    </li>
+
+
+            
+
+</ul>
+
+</div>
