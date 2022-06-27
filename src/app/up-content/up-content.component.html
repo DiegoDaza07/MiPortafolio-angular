@@ -3,10 +3,14 @@
 <div id="up">
     <ul class="up">
      <!-- 
-            se agregaran estos slider despues 8/05/2022
-          <li><a href="#slide5">Descarga</a>
-        </li> <li><a href="#slide6">Redes Sociales</a></li>-->  
+            se agregaran estos slider
+
+        <li><a href="#slide5">Comentarios</a></li> 
+        <li><a href="#slide6">Aplicaciones Dominadas</a></li>
+      
+      -->  
         <li><a href="#slide7">Administrador</a></li>
+        <div *ngIf="servicio.registrado"><button type="button" class="btn btn-danger" (click)="salir()">SALIR DE ADMINISTRADOR</button></div>
     </ul>
 <div>
 

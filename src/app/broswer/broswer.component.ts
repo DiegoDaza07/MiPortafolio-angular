@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ServiciosService } from '../servicios.service';
 
 
 
@@ -10,13 +11,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BroswerComponent implements OnInit {
 
+registrado = localStorage.getItem("registrado")  ;
 
 
 
 
-  constructor() { }
+  constructor(public servicio:ServiciosService) {
+  
+   }
 
   ngOnInit(): void {
+
+
+    
   }
 
 }

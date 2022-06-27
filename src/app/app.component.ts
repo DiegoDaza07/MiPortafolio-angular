@@ -1,3 +1,4 @@
+import { variable } from '@angular/compiler/src/output/output_ast';
 import { Component,  } from '@angular/core';
 
 
@@ -11,4 +12,8 @@ import { Component,  } from '@angular/core';
 export class AppComponent {
   title = 'poject-angular';
 }
+
+const estado = false;
+
+localStorage.setItem("registrado",JSON.stringify(estado));
 

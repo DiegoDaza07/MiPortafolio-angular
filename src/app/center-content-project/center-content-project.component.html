@@ -1,0 +1,39 @@
+
+
+<div  class="educacion">
+    <div *ngFor="let proyecto of proyectos; let i=index " class="plantilla" >
+        <div class="plantilla-imagen">
+            <img src="./assets/Projects.jpg" >
+        </div>
+        <div class="plantilla-texto">
+            <div class="institucion"><h2>{{proyecto.nombre}}</h2></div>
+            <div class="datos"><p>Acerca de:&nbsp;{{proyecto.acerca}}</p></div>
+            <div class="datos">
+                <p>Link GITHUB:&nbsp;</p>
+                <a href={{proyecto.link}} target="_blank">{{proyecto.link}}</a>
+            </div>
+            <div *ngIf="servicio.registrado" class="configuracion">
+                    <button class="btn btn-danger" (click)="eliminarProyecto(i)" >Eliminar</button>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!-- hasta aqui viene la parte visible, esta es la parte editable, hasta aqui viene la parte visible, esta es la parte editable-->
+
+
+
+<div *ngIf="servicio.registrado"  >
+    
+   
+    <div style="padding: 1%;" class="plantilla-texto" style="width: 98%;"> 
+        <h2 style="padding: 1%;">AGREGAR EDUCACION</h2>
+        <div class="configuracion"><p>Nombre del Proyecto</p><input type="text" [(ngModel)]="nombre" ></div>
+        <div class="configuracion"><p>Acerca de que es el Proyecto</p><input type="text" [(ngModel)]="acerca" ></div>
+        <div class="configuracion"><p>Link de Github</p><input type="text" [(ngModel)]="git"></div>
+        <div class="configuracion"><button  class="btn btn-success" (click)="agregarProyecto()" >Agregar</button></div>
+    </div>   
+
+
+</div>
+

@@ -38,94 +38,6 @@ ul.slider li:target {
 
 
 
-.sobre-mi{
-
-  
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-
-  
-}
-
-
-.sobre-mi-cuerpo-1{
-  background-color: aqua;
-  width: 50%;
-
-  height: 100%;
-
-}
-.cuerpo-1-imagen{
-  width: 100%;
-  height: 50%;
-  background-color: aliceblue;
-}
-.cuerpo-1-texto{
-
-  
- 
-  width: 100%;
-  height: 50%;
-
-  color: black;
-  background-color: antiquewhite;
- 
-}
-.texto-sobre-mi{
-  padding: 10%;
-}
-
-
-.sobre-mi-cuerpo-2{
-  color: black;
-  background-color: beige;
-  width: 50%;
-  height: 100%;
-}
-.mi-nombre{
-  padding: 10%;
-  text-align: center;
-
-}
-.cuerpo-2-contenido{
-  padding: 5%;
-  
-}
-
-    .plantilla{
-      
-      width: 100%;
-      height: 100%;
-
-      display: flex;
-      margin-bottom: 1%;
-
-     }
-
-    .plantilla-imagen{
-      width: 30%;
-      min-height: 100%;
-      padding: 1%;
-      
-      background-color: beige;
-
-    }
-    .plantilla-texto{
-      width: 70%;
-      height: 100%;
-      padding: 1%;
-      background-color: wheat;
-    }
-
-    .datos{
-    display: flex;
-  
-    }
-
-
-
     #slide1 {
     background-color: #00324b;
     color: #fff;
@@ -163,22 +75,9 @@ ul.slider li:target {
     background-color: #00324b;
     color: #ffffff;
     
+    
     }
-.edicion{
-  margin-top: 1%;
-  border: black 2px double;
- 
-}
 
-.configuracion{
-  border-bottom: black 2px dashed;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-between;
-  padding: 1%;
-
-}
 
 
 @media (max-width: 700px) {

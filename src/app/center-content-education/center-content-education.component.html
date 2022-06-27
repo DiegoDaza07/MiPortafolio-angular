@@ -1,0 +1,39 @@
+
+
+<div  class="educacion">
+    <div *ngFor="let educa of educaciones; let i=index " class="plantilla" >
+        <div class="plantilla-imagen">
+            <img src="./assets/Education.jpg" alt="">
+        </div>
+        <div class="plantilla-texto">
+            <div class="institucion"><h2>{{educa.institucion}}</h2></div>
+            <div class="datos"><p>Nivel:&nbsp;{{educa.nivel}}</p></div>
+            <div class="datos"><p>Titulo:&nbsp;{{educa.titulo}}</p></div>
+            <div class="datos"><p>Tiempo:&nbsp;{{educa.tiempo}} </p></div>
+    
+            <div *ngIf="servicio.registrado" class="configuracion">
+                    <button class="btn btn-danger" (click)="eliminarEducacion(i)" >Eliminar</button>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!-- hasta aqui viene la parte visible, esta es la parte editable, hasta aqui viene la parte visible, esta es la parte editable-->
+
+
+
+<div *ngIf="servicio.registrado"  >
+    
+   
+    <div style="padding: 1%;" class="plantilla-texto" style="width: 98%;"> 
+        <h2 style="padding: 1%;">AGREGAR EDUCACION</h2>
+        <div class="configuracion"><p>Institucion:</p><input type="text" [(ngModel)]="institucion" ></div>
+        <div class="configuracion"><p>Nivel:</p><input type="text" [(ngModel)]="nivel" ></div>
+        <div class="configuracion"><p>Titulo:</p><input type="text" [(ngModel)]="titulo"></div>
+        <div class="configuracion"><p>Tiempo:</p><input type="text" [(ngModel)]="tiempo" ></div>
+        <div class="configuracion"><button  class="btn btn-success" (click)="agregarEducacion()" >Agregar</button></div>
+    </div>   
+
+
+</div>
+

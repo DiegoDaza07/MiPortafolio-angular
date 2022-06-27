@@ -1,0 +1,52 @@
+
+
+    .plantilla{
+      
+        width: 100%;
+        height: 100%;
+  
+        display: flex;
+        margin-bottom: 1%;
+  
+       }
+  
+       .plantilla-imagen{
+        width: 30%;
+        height: auto;
+        padding: 1%;
+        overflow: hidden;
+        text-align: center;
+        background-color: beige;
+  
+      }
+      img{
+        width: auto;
+        height: auto;
+      }
+      .plantilla-texto{
+        width: 70%;
+        height: auto;
+        padding: 1%;
+        background-color: wheat;
+      }
+  
+      .datos{
+      display: flex;
+    
+      }
+      .edicion{
+        margin-top: 1%;
+        border: black 2px double;
+       
+      }
+      
+      .configuracion{
+        border-bottom: black 2px dashed;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        padding: 1%;
+      
+      }
+    
+    

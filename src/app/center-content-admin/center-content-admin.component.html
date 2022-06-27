@@ -1,0 +1,53 @@
+<div *ngIf="!servicio.registrado">
+
+    <div class="sesion">
+
+        <div class="p-3 mb-2 bg-primary text-white">PORTAFOLIO WEB</div>
+        
+        <div class="mb-3">
+            <div class="input-group mb-3">
+                <span class="input-group-text">USUARIO:</span>
+                <input type="text" class="form-control" placeholder="Ingrese Usuario" [(ngModel)]="usuario">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">CONTRASEÑA:</span>
+                <input type="password" class="form-control" placeholder="Ingrese Contraseña" [(ngModel)]="contrasena" >
+            </div>
+
+            <div class="configuracion">
+                <button type="button" class="btn btn-primary" (click)="administrador()">Iniciar Sesión</button>
+                <button type="button" class="btn btn-success" (click)="acceso_rapido()">Acceso rapido</button>
+
+            </div>
+       </div>
+   </div>
+</div>
+
+<!-- CAMBIO DE CUANDO EL USUARIO INGRESA -->
+
+<div *ngIf="servicio.registrado">
+    
+    <div class="p-3 mb-2 bg-success text-white"><H1 style="text-align: center;">ADMINISTRADOR</H1></div>
+
+        <div class="edicion">
+               
+                <div class="input-group mb-3">
+                    <span class="input-group-text">CAMBIAR NOMBRE DE USUARIO:</span>
+                    <input type="text" class="form-control" placeholder="Ingrese Usuario:" [(ngModel)]="cambio[0]">
+                    <input type="text" class="form-control" placeholder="Ingrese Nuevo Usuario:" [(ngModel)]="cambio[2]">
+                    <button type="button" class="btn btn-success" (click)="cambiar(0,2)">Cambiar</button>
+                </div>
+                
+    
+                <div class="input-group mb-3">
+                    <span class="input-group-text">CAMBIAR CONTRASEÑA:</span>
+                    <input type="password" class="form-control" placeholder="Ingrese Contraseña" [(ngModel)]="cambio[1]">
+                    <input type="password" class="form-control" placeholder="Ingrese Nueva Contraseña" [(ngModel)]="cambio[3]">
+                    <button type="button" class="btn btn-success" (click)="cambiar(1,2)">Cambiar</button>
+                </div>
+        </div>  
+
+
+
+</div>

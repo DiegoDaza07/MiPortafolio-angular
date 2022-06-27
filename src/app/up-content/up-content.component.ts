@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiciosService } from '../servicios.service';
 
 @Component({
   selector: 'app-up-content',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpContentComponent implements OnInit {
 
-  constructor() { }
+salir(){
+  this.servicio.cambio(false);
+}
+
+  constructor(public servicio:ServiciosService) { }
 
   ngOnInit(): void {
   }
