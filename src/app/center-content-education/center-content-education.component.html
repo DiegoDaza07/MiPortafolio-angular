@@ -1,18 +1,26 @@
 
 
 <div  class="educacion">
-    <div *ngFor="let educa of educaciones; let i=index " class="plantilla" >
+    <div *ngFor="let education of educations; let i=index " class="plantilla" >
         <div class="plantilla-imagen">
             <img src="./assets/Education.jpg" alt="">
         </div>
         <div class="plantilla-texto">
-            <div class="institucion"><h2>{{educa.institucion}}</h2></div>
-            <div class="datos"><p>Nivel:&nbsp;{{educa.nivel}}</p></div>
-            <div class="datos"><p>Titulo:&nbsp;{{educa.titulo}}</p></div>
-            <div class="datos"><p>Tiempo:&nbsp;{{educa.tiempo}} </p></div>
+            
+            <h2 class="p-3 mb-2 bg-success text-white">{{education.institution}}</h2>
+
+            <div class="input-group mb-3"><span class="form-control">Titulo Obtenido:&nbsp;{{education.education}}</span></div>
+            
+            <div class="input-group mb-3"><span class="form-control">Nivel Academico:&nbsp;{{education.degree}}</span></div>
+
+            <div class="input-group mb-3"><span class="form-control">Tiempo Estudiado:&nbsp;{{education.time}} </span></div>
     
             <div *ngIf="servicio.registrado" class="configuracion">
-                    <button class="btn btn-danger" (click)="eliminarEducacion(i)" >Eliminar</button>
+
+                    <button class="btn btn-warning" (click)="editEducation(education.id)" >Editar</button> 
+
+                    <button class="btn btn-danger" (click)="deleteEducation(education.id)" >Eliminar</button>
+
             </div>
         </div> 
     </div>
@@ -25,13 +33,29 @@
 <div *ngIf="servicio.registrado"  >
     
    
-    <div style="padding: 1%;" class="plantilla-texto" style="width: 98%;"> 
-        <h2 style="padding: 1%;">AGREGAR EDUCACION</h2>
-        <div class="configuracion"><p>Institucion:</p><input type="text" [(ngModel)]="institucion" ></div>
-        <div class="configuracion"><p>Nivel:</p><input type="text" [(ngModel)]="nivel" ></div>
-        <div class="configuracion"><p>Titulo:</p><input type="text" [(ngModel)]="titulo"></div>
-        <div class="configuracion"><p>Tiempo:</p><input type="text" [(ngModel)]="tiempo" ></div>
-        <div class="configuracion"><button  class="btn btn-success" (click)="agregarEducacion()" >Agregar</button></div>
+    <div style="padding: 1%;" class="plantilla-texto" style="width: 100%;" >
+         
+        <h2 *ngIf="!educationEditButton" style="padding: 1%;">AGREGAR EDUCACION</h2>
+
+        <h2 *ngIf="educationEditButton" style="padding: 1%;">EDITAR EDUCACION</h2>
+
+        <div  class="input-group mb-3"><span class="input-group-text">Institucion  Educativa:</span><input type="text" class="form-control" [(ngModel)]="educationNew.institution"></div>
+
+        <div  class="input-group mb-3"><span class="input-group-text">Titulo Obtenido:</span><input type="text" class="form-control" [(ngModel)]="educationNew.education" ></div>
+
+        <div  class="input-group mb-3"><span class="input-group-text">Nivel Academico:</span><input type="text" class="form-control" [(ngModel)]="educationNew.degree" ></div>
+
+        <div  class="input-group mb-3"><span class="input-group-text">Tiempo Estudiado:</span><input type="text" class="form-control" [(ngModel)]="educationNew.time"></div>
+
+        <div  class="configuracion">
+
+            <div *ngIf="!educationEditButton" ><button  class="btn btn-success" (click)="addEducation()" >Agregar</button></div>
+
+            <div *ngIf="educationEditButton" ><button  class="btn btn-primary" (click)="saveChangeEducation()" >Guardar Cambios</button></div>
+
+            <div *ngIf="educationEditButton" ><button  class="btn btn-info" (click)="cancelChangeEducation()" >Cancelar</button></div>
+            
+        </div>
     </div>   
 
 

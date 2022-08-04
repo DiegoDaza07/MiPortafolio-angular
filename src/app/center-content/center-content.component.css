@@ -1,8 +1,3 @@
-  p{
-    font-size: 2vh;
-  }
-
-
 
   ul.slider {
 
@@ -80,42 +75,5 @@ ul.slider li:target {
 
 
 
-@media (max-width: 700px) {
-
-  .sobre-mi{
-      display: contents;
-   }
-   .sobre-mi-cuerpo-1{
-     width: 100%;
-     height: 50%;
-   }
-   .cuerpo-1-imagen{
-     height: 50%;
-    background-color: aliceblue;
-  }
-  .sobre-mi-cuerpo-2{
-    width: 100%;
-    height: auto;
-  }
-  .plantilla{
-
-    display: contents;
-    height: 100%;
-      
-   }
-
-  .plantilla-imagen{
-    width: 100%;
-    height: 40%;
-
-
-  }
-  .plantilla-texto{
-    width: 100%;
-    height: auto;
-
-  }
-
-}
     
 

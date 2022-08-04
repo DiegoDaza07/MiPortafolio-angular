@@ -18,7 +18,8 @@ import { CenterContentExperienceComponent } from './center-content-experience/ce
 import { CenterContentEducationComponent } from './center-content-education/center-content-education.component';
 import { CenterContentProjectComponent } from './center-content-project/center-content-project.component';
 import { CenterContentAdminComponent } from './center-content-admin/center-content-admin.component';
-
+import { DataService } from './data.services';
+import { HttpClientModule} from "@angular/common/http";
 
 
 
@@ -38,9 +39,10 @@ import { CenterContentAdminComponent } from './center-content-admin/center-conte
     BrowserModule, 
     FormsModule,   
     ReactiveFormsModule,
+    HttpClientModule,
 
   ],
-  providers: [ServiciosService],
+  providers: [ServiciosService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

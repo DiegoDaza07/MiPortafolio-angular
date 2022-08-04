@@ -1,3 +1,4 @@
+
 <div *ngIf="!servicio.registrado" class="sobre-mi">
 
     <div class="sobre-mi-cuerpo-1"> 
@@ -7,17 +8,17 @@
         </div>
 
         <div class="cuerpo-1-texto">
-            <div class="texto-sobre-mi"><p>{{usuario[0]}}</p></div>
+            <div class="texto-sobre-mi"><span >{{ userData.aboutMe }} </span></div> <!-- TEXTO SOBRE EL USUARIO-->
         </div>
     </div>
 
     <div class="sobre-mi-cuerpo-2">  
-        <div class="mi-nombre" > <H1 >{{usuario[1]}}</H1></div>
+        <div class="mi-nombre" > <H1 >{{userData.name}}</H1></div> <!--NOMBRE COMPLETO DE USUARIO -->
          <div class="cuerpo-2-contenido">
-             <div class="datos"><p>Domicilio:&nbsp;{{usuario[2]}}</div> 
-             <div class="datos"><p>Correo Electronico: {{usuario[3]}}</p></div>
-             <div class="datos"><p>Numero de Documento: {{usuario[4]}}</p></div> 
-             <div class="datos"><p>Telefono: {{usuario[5]}}</p></div>
+             <div class="input-group mb-3"><span class="form-control">Domicilio:&nbsp;{{userData.address}}</span></div> 
+             <div class="input-group mb-3"><span class="form-control">Correo Electronico: {{userData.mail}}</span></div>
+             <div class="input-group mb-3"><span class="form-control">Numero de Documento: {{userData.documentNumber}}</span></div> 
+             <div class="input-group mb-3"><span class="form-control">Telefono: {{userData.phone}}</span></div>
          </div>
     </div>
 </div>
@@ -28,53 +29,45 @@
         <div class="edicion"> 
             
             <h1>SOBRE MI</h1>
-            
+
             <div class="input-group mb-3">
                 <span class="input-group-text">Nombre Completo:</span>
-                <input type="text" class="form-control" placeholder={{usuario[1]}} [(ngModel)]="cambio[1]">
-                <button type="button" class="btn btn-success" (click)="cambiar(1)">Cambiar</button>
+                <input type="text" class="form-control"  [(ngModel)]="userData.name">
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">Texto Sobre Mi:</span>
-                <input type="text" class="form-control" placeholder={{usuario[0]}} [(ngModel)]="cambio[0]">
-                <button type="button" class="btn btn-success" (click)="cambiar(0)">Cambiar</button>
+                <input type="text" class="form-control"  [(ngModel)]="userData.aboutMe">
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">Domicilio:</span>
-                <input type="text" class="form-control" placeholder={{usuario[2]}} [(ngModel)]="cambio[2]">
-                <button type="button" class="btn btn-success" (click)="cambiar(2)">Cambiar</button>
+                <input type="text" class="form-control"  [(ngModel)]="userData.address">
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">Correo Electronico:</span>
-                <input type="text" class="form-control" placeholder={{usuario[3]}} [(ngModel)]="cambio[3]">
-                <button type="button" class="btn btn-success" (click)="cambiar(3)">Cambiar</button>
+                <input type="text" class="form-control"  [(ngModel)]="userData.mail">
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">Numero De Documento:</span>
-                <input type="text" class="form-control" placeholder={{usuario[4]}} [(ngModel)]="cambio[4]">
-                <button type="button" class="btn btn-success" (click)="cambiar(4)">Cambiar</button>
+                <input type="text" class="form-control"  [(ngModel)]="userData.documentNumber">
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">Telefono:</span>
-                <input type="text" class="form-control" placeholder={{usuario[5]}} [(ngModel)]="cambio[5]">
-                <button type="button" class="btn btn-success" (click)="cambiar(5)">Cambiar</button>
+                <input type="text" class="form-control"  [(ngModel)]="userData.phone">
             </div>
+
+            <div class="input-group mb-3">
+                <button class="btn-primary" (click)="saveChangeUser()">GUARDAR CAMBIOS</button>
+                <button class="btn-info" (click)="cancelChangeUser()">CANCELAR</button>
+            </div>
+
 
         </div>
     </div>
 </div> 
 
 
-<!-- 
-            <div class="configuracion"><p>Mi nombre</p><input type="text" [(ngModel)]="mi_nombre"></div>
-            <div class="configuracion"><p>Texto Sobre Mi</p><input type="text" [(ngModel)]="texto_sobre_mi"></div>
-            <div class="configuracion"><p>Domicilio</p><input type="text" [(ngModel)]="domicilio"></div>
-            <div class="configuracion"><p>Correo</p><input type="text" [(ngModel)]="correo"></div>
-            <div class="configuracion"><p>Numero De Documento</p><input type="number" [(ngModel)]="numero_de_documento"></div>
-            <div class="configuracion"><p>Telefono</p><input type="number" [(ngModel)]="telefono"></div> 
-        -->

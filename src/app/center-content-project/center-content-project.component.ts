@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { proyecto } from '../objetos.model';
+import { Component, Injectable, OnInit } from '@angular/core';
+import { DataService } from '../data.services';
+import { project } from '../objects.models';
 import { ServiciosService } from '../servicios.service';
 
 @Component({
@@ -7,36 +8,85 @@ import { ServiciosService } from '../servicios.service';
   templateUrl: './center-content-project.component.html',
   styleUrls: ['./center-content-project.component.css']
 })
-export class CenterContentProjectComponent implements OnInit {
 
-  proyectos:proyecto[] = [
+@Injectable()
+export class CenterContentProjectComponent implements OnInit 
+{
+  constructor(public servicio:ServiciosService, private dataService:DataService) { }
 
-    new proyecto("Portafolio De Servicios Web", "Portafolio creado en Angular Su front, con el fin de mostrar este proyecto jeje cambiaremos esto", "https://github.com/DiegoDaza07/MiPortafolio-angular"),
+  projects:project[] = [];
+  projectNew:project = new project();
+  
+  
+  projectEditButton:boolean = false;
  
-   ];
- 
-   agregarProyecto(){
- 
-     this.proyectos.push(new proyecto(this.nombre, this.acerca, this.git));
-   }
- 
-   eliminarProyecto(a: number){
- 
-     this.proyectos.splice(a, 1);
- 
-   }
+
+  projectVoid()
+  {
+    this.projectNew.id = null;
+    this.projectNew.name = "";
+    this.projectNew.about = "";
+    this.projectNew.link = "";
+
+  }
+
+
+  addProject()
+  { 
+
+    if(this.projectNew.name == "")      { alert("Ingrese nombre del proyecto"); }
+    else if(this.projectNew.about == ""){ alert("Ingrese Sobre que trata el proyecto");}
+    else {
+            this.dataService.createProject(this.projectNew).subscribe();
+            alert("Creado nuevo proyecto con el nombre " + this.projectNew.name);
+            this.ngOnInit();
+         }
+  }
+
+  editProject(id:null)
+    { 
+      this.projectEditButton = true;
+      const idString = String(id);
+      alert("Edite El projecto");
+      this.dataService.getIdproject(idString).subscribe( pj=> this.projectNew=pj );
+
+    }
+
+  saveChangeProject()
+  {
+    this.dataService.createProject(this.projectNew).subscribe();
+    this.projectVoid();
+    this.projectEditButton = false;
+    alert("Proyecto Actualizado");
+    this.ngOnInit();
+      
+  }  
+
+  cancelChangeProject(){
+
+    this.projectVoid();
+    this.projectEditButton = false;
+    alert("Cancelado");
+
+  }
+
+
+  deleteProject(id:null)
+    { 
+      const idString = String(id);
+      confirm("Seguro de eliminar ");
+      if(confirm()){this.dataService.deleteproject(idString).subscribe();}
+      alert("eliminado");
+      this.ngOnInit();
+
+    }
    
  
-   nombre = "";
-   acerca = "";
-   git = "";
- 
-   
- 
 
-  constructor(public servicio:ServiciosService) { }
 
   ngOnInit(): void {
+   this.dataService.getAllproject().subscribe(p => this.projects=p );
+   
   }
 
 }

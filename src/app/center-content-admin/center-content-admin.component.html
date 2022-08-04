@@ -6,18 +6,18 @@
         
         <div class="mb-3">
             <div class="input-group mb-3">
-                <span class="input-group-text">USUARIO:</span>
-                <input type="text" class="form-control" placeholder="Ingrese Usuario" [(ngModel)]="usuario">
+                <span class="input-group-text">CORREO:</span>
+                <input type="text" class="form-control" placeholder="Ingrese Correo" [(ngModel)]="inputMail">
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">CONTRASEÑA:</span>
-                <input type="password" class="form-control" placeholder="Ingrese Contraseña" [(ngModel)]="contrasena" >
+                <input type="password" class="form-control" placeholder="Ingrese Contraseña" [(ngModel)]="inputPassword">
             </div>
 
             <div class="configuracion">
-                <button type="button" class="btn btn-primary" (click)="administrador()">Iniciar Sesión</button>
-                <button type="button" class="btn btn-success" (click)="acceso_rapido()">Acceso rapido</button>
+                <button type="button" class="btn btn-primary" (click)="sesionInit()">Iniciar Sesión</button>
+                <button type="button" class="btn btn-success" (click)="fastAccess()">Acceso rapido</button>
 
             </div>
        </div>
@@ -28,25 +28,9 @@
 
 <div *ngIf="servicio.registrado">
     
-    <div class="p-3 mb-2 bg-success text-white"><H1 style="text-align: center;">ADMINISTRADOR</H1></div>
+    <div class="p-3 mb-2 bg-success text-white"><H1 style="text-align: center;">ADMINISTRADOR {{userAdmin.name}}</H1></div>
 
-        <div class="edicion">
-               
-                <div class="input-group mb-3">
-                    <span class="input-group-text">CAMBIAR NOMBRE DE USUARIO:</span>
-                    <input type="text" class="form-control" placeholder="Ingrese Usuario:" [(ngModel)]="cambio[0]">
-                    <input type="text" class="form-control" placeholder="Ingrese Nuevo Usuario:" [(ngModel)]="cambio[2]">
-                    <button type="button" class="btn btn-success" (click)="cambiar(0,2)">Cambiar</button>
-                </div>
-                
-    
-                <div class="input-group mb-3">
-                    <span class="input-group-text">CAMBIAR CONTRASEÑA:</span>
-                    <input type="password" class="form-control" placeholder="Ingrese Contraseña" [(ngModel)]="cambio[1]">
-                    <input type="password" class="form-control" placeholder="Ingrese Nueva Contraseña" [(ngModel)]="cambio[3]">
-                    <button type="button" class="btn btn-success" (click)="cambiar(1,2)">Cambiar</button>
-                </div>
-        </div>  
+
 
 
 

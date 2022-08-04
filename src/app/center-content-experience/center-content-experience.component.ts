@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { experiencia } from '../objetos.model';
+import { Component, Injectable, OnInit } from '@angular/core';
+import { DataService } from '../data.services';
+import { experience } from '../objects.models';
 import { ServiciosService } from '../servicios.service';
 
 @Component({
@@ -7,38 +8,87 @@ import { ServiciosService } from '../servicios.service';
   templateUrl: './center-content-experience.component.html',
   styleUrls: ['./center-content-experience.component.css']
 })
-export class CenterContentExperienceComponent implements OnInit {
 
-  experiencias:experiencia[] = [
 
-    new experiencia("Fimtec LTDA", "Tecnico Electricista", "Eliodoro Torrejano", "http://fimtecltda.com/web/", "1 año"),
+@Injectable()
+export class CenterContentExperienceComponent implements OnInit 
+{
+  constructor(public servicio:ServiciosService, private dataService:DataService) { }
+
+  experiences:experience[] = [];
+  experienceNew:experience = new experience();
+  
+  
+  experienceEditButton:boolean = false;
  
-   ];
- 
-   agregarExperiencia(){
- 
-     this.experiencias.push(new experiencia(this.institucion, this.pagina, this.jefe, this.cargo, this.tiempo));
-   }
- 
-   eliminarExperiencia(a: number){
- 
-     this.experiencias.splice(a, 1);
- 
-   }
+
+  experienceVoid()
+  {
+    this.experienceNew.id = null;
+    this.experienceNew.company = "";
+    this.experienceNew.manager = "";
+    this.experienceNew.position = "";
+    this.experienceNew.time = "";
+    this.experienceNew.web = "";
+  }
+
+
+  addExperience()
+  { 
+
+    if(this.experienceNew.company == "")      { alert("Ingrese Institucion"); }
+    else if(this.experienceNew.position == ""){ alert("Ingrese Cargo");}
+    else {
+            this.dataService.createExperience(this.experienceNew).subscribe();
+            alert("Creada nueva experiencia de " + this.experienceNew.company);
+            this.ngOnInit();
+         }
+  }
+
+  editExperience(id:null)
+    { 
+      this.experienceEditButton = true;
+      const idString = String(id);
+      alert("Edite La experiencia");
+      this.dataService.getIdExperience(idString).subscribe( ex=> this.experienceNew=ex );
+
+    }
+
+  saveChangeExperience()
+  {
+    this.dataService.createExperience(this.experienceNew).subscribe();
+    this.experienceVoid();
+    this.experienceEditButton = false;
+    alert("Experiencia Actualizada");
+    this.ngOnInit();
+      
+  }  
+
+  cancelChangeExperience(){
+
+    this.experienceVoid();
+    this.experienceEditButton = false;
+    alert("Cancelado");
+
+  }
+
+
+  deleteExperience(id:null)
+    { 
+      const idString = String(id);
+      confirm("Seguro de eliminar ");
+      if(confirm()){this.dataService.deleteExperience(idString).subscribe();}
+      alert("Eliminado");
+      this.ngOnInit();
+
+    }
    
-
-   institucion = "";
-   cargo = "";
-   jefe = "";
-   pagina = "";
-   tiempo = "";
  
 
-
-
-  constructor(public servicio:ServiciosService) { }
 
   ngOnInit(): void {
+   this.dataService.getAllExperience().subscribe(e => this.experiences=e );
+   
   }
 
 }
