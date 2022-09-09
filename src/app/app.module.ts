@@ -20,6 +20,7 @@ import { CenterContentProjectComponent } from './center-content-project/center-c
 import { CenterContentAdminComponent } from './center-content-admin/center-content-admin.component';
 import { DataService } from './data.services';
 import { HttpClientModule} from "@angular/common/http";
+import { CenterContentSkillComponent } from './center-content-skill/center-content-skill.component';
 
 
 
@@ -33,7 +34,8 @@ import { HttpClientModule} from "@angular/common/http";
     CenterContentExperienceComponent,
     CenterContentEducationComponent,
     CenterContentProjectComponent,
-    CenterContentAdminComponent
+    CenterContentAdminComponent,
+    CenterContentSkillComponent
   ],
   imports: [
     BrowserModule, 
