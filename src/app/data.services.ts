@@ -11,7 +11,7 @@ import { education, experience,  project, user } from "./objects.models";
 )
 export class DataService{
 
-    private url:string="https://calm-shore-43654.herokuapp.com/"
+    private url:string="https://calm-shore-43654.herokuapp.com/user";
     constructor(private httpClient:HttpClient){}
 
     //Servicios para el usuario, 
