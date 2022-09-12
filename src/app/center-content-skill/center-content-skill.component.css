@@ -1,8 +1,9 @@
 .skill-container{
     display: flex;
+    color:white;
    
 }
 .skill{
-   
+   color:white;
     padding: 1%;
 }
