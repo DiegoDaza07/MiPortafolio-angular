@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ServiciosService } from '../servicios.service';
+
 
 
 @Component({
@@ -11,12 +11,6 @@ import { ServiciosService } from '../servicios.service';
 export class CenterContentComponent implements OnInit {
 
     
-  constructor(private servicio:ServiciosService) 
-  { 
-  
-  }
-
-
 
   ngOnInit(): void {
 

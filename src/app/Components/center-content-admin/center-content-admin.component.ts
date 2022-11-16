@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.services';
-import { user } from '../objects.models';
-import { ServiciosService } from '../servicios.service';
+import { user } from 'src/app/Models/objects.models';
+import { DataService } from 'src/app/Services/data.services';
+import { ServiciosService } from 'src/app/Services/servicios.service';
+
+
 
 @Component({
   selector: 'app-center-content-admin',

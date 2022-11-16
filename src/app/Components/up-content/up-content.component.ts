@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiciosService } from '../servicios.service';
+import { ServiciosService } from 'src/app/Services/servicios.service';
+
 
 @Component({
   selector: 'app-up-content',

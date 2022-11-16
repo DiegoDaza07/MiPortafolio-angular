@@ -1,7 +1,8 @@
 import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.services';
-import { ServiciosService } from '../servicios.service';
+import { DataService } from 'src/app/Services/data.services';
+import { ServiciosService } from 'src/app/Services/servicios.service';
+
 
 @Component({
   selector: 'app-center-content-skill',

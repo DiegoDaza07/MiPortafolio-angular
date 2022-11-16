@@ -1,26 +1,19 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
-
-
-
-
-
-import { AppComponent } from './app.component';
-import { CenterContentComponent } from './center-content/center-content.component';
-import { BroswerComponent } from './broswer/broswer.component';
-import { UpContentComponent } from './up-content/up-content.component';
-import { ServiciosService } from './servicios.service';
-import { CenterContentAboutMeComponent } from './center-content-about-me/center-content-about-me.component';
-import { CenterContentExperienceComponent } from './center-content-experience/center-content-experience.component';
-import { CenterContentEducationComponent } from './center-content-education/center-content-education.component';
-import { CenterContentProjectComponent } from './center-content-project/center-content-project.component';
-import { CenterContentAdminComponent } from './center-content-admin/center-content-admin.component';
-import { DataService } from './data.services';
-import { HttpClientModule} from "@angular/common/http";
-import { CenterContentSkillComponent } from './center-content-skill/center-content-skill.component';
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppComponent } from "./app.component";
+import { BroswerComponent } from "./Components/broswer/broswer.component";
+import { CenterContentAboutMeComponent } from "./Components/center-content-about-me/center-content-about-me.component";
+import { CenterContentAdminComponent } from "./Components/center-content-admin/center-content-admin.component";
+import { CenterContentEducationComponent } from "./Components/center-content-education/center-content-education.component";
+import { CenterContentExperienceComponent } from "./Components/center-content-experience/center-content-experience.component";
+import { CenterContentProjectComponent } from "./Components/center-content-project/center-content-project.component";
+import { CenterContentSkillComponent } from "./Components/center-content-skill/center-content-skill.component";
+import { CenterContentComponent } from "./Components/center-content/center-content.component";
+import { UpContentComponent } from "./Components/up-content/up-content.component";
+import { DataService } from "./Services/data.services";
+import { ServiciosService } from "src/app/Services/servicios.service";
 
 
 

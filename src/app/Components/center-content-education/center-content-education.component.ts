@@ -1,7 +1,9 @@
 import { Component, Injectable, OnInit } from '@angular/core';
-import { ServiciosService } from '../servicios.service';
-import { education} from '../objects.models';
-import { DataService } from '../data.services';
+import { education } from 'src/app/Models/objects.models';
+import { DataService } from 'src/app/Services/data.services';
+import { ServiciosService } from 'src/app/Services/servicios.service';
+
+
 
 @Component({
   selector: 'app-center-content-education',

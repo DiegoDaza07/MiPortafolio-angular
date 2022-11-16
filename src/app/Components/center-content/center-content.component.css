@@ -1,4 +1,5 @@
 
+
   ul.slider {
 
     padding: 0;
@@ -11,15 +12,12 @@
      
     width: 100%;
     height: 100%;
-    overflow-y: auto;
     padding: 2%;
     position: relative;
     opacity: 0;
     transition: opacity .5s;
 
 }
-
-
 
  ul.slider li:first-child {
     opacity: 1;

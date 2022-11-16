@@ -1,8 +1,9 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable, Type } from "@angular/core";
 import { Observable } from "rxjs";
-import { skill } from "./center-content-skill/center-content-skill.component";
-import { education, experience,  project, user } from "./objects.models";
+import { skill } from "src/app/Components/center-content-skill/center-content-skill.component";
+import { user, experience, education, project } from "src/app/Models/objects.models";
+
 
 @Injectable(
     {

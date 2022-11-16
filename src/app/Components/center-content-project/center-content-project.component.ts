@@ -1,7 +1,9 @@
 import { Component, Injectable, OnInit } from '@angular/core';
-import { DataService } from '../data.services';
-import { project } from '../objects.models';
-import { ServiciosService } from '../servicios.service';
+import { project } from 'src/app/Models/objects.models';
+import { DataService } from 'src/app/Services/data.services';
+import { ServiciosService } from 'src/app/Services/servicios.service';
+
+
 
 @Component({
   selector: 'app-center-content-project',

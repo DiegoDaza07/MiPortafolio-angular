@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ServiciosService } from '../servicios.service';
+import { Component, OnInit } from "@angular/core";
+import { ServiciosService } from "src/app/Services/servicios.service";
+
+
 
 
 
